@@ -43,7 +43,7 @@ jobs:
 
       # 9️⃣ Verify zip file size  <-- ADD THIS NEW STEP
       - name: Verify zip file size
-        run: ls -l deploy.zip
+        run: ls -lh deploy.zip
 
       # 7️⃣ Setup SSH to server
       - name: Setup SSH
