@@ -41,6 +41,10 @@ jobs:
       - name: Package for deployment
         run: zip -r deploy.zip . -x "*.git*" "node_modules/*" ".env" "storage/*"
 
+      # 9️⃣ Verify zip file size  <-- ADD THIS NEW STEP
+      - name: Verify zip file size
+        run: ls -l deploy.zip
+
       # 7️⃣ Setup SSH to server
       - name: Setup SSH
         uses: webfactory/ssh-agent@v0.9.0
